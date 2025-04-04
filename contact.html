@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | BERNOS TECHNOLOGIES</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="vector.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="emergency.css">
+    <style>
+        @font-face {
+            font-family: 'Sadiss';
+            src: url('Sadiss-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        :root {
+            --primary-color: #6c5ce7;
+            --secondary-color: #a29bfe;
+            --accent-color: #00b894;
+            --background-color: #0f0f1a;
+            --card-color: rgba(30, 30, 46, 0.7);
+            --text-color: #ffffff;
+            --text-secondary: #aaaaaa;
+            --success-color: #00b894;
+            --error-color: #d63031;
+            --yellow-accent: #ffd32a;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        
+        <div class="glass-panel glass-panel-1"></div>
+        <div class="glass-panel glass-panel-2"></div>
+        <div class="glass-panel glass-panel-3"></div>
+    </div>
+    
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="vector.png" alt="BERNOS TECHNOLOGIES Logo" class="logo-image">
+                <div class="logo-text">
+                    <span class="logo-text-bernos">BERNOS</span>
+                    <span class="logo-text-technologies">TECHNOLOGIES</span>
+                </div>
+            </a>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">Inside Look</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+                
+                <button class="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </nav>
+            
+            <div class="right-section" style="display: flex; align-items: center;">
+                <div class="contact-support">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <div class="contact-info">
+                        <span class="contact-label">Contact Support</span>
+                        <span class="contact-number">+251910111213</span>
+                    </div>
+                </div>
+                
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search...">
+                    <button class="search-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-accent"></div>
+        
+        <div class="container">
+            <div class="page-hero-content fade-in">
+                <h1 class="page-title">Contact Us</h1>
+                <p class="page-subtitle">Get in touch with our team for any inquiries or support</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-info-section section-padding">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">We're here to help with any questions or concerns</p>
+            </div>
+            
+            <div class="contact-cards-container">
+                <div class="contact-card glass-card fade-in">
+                    <div class="contact-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="contact-card-title">Phone</h3>
+                    <p class="contact-card-text">Call us for immediate assistance</p>
+                    <div class="contact-card-info">
+                        <a href="tel:+251910111213">+251 910 111 213</a>
+                        <a href="tel:+251911121314">+251 911 121 314</a>
+                    </div>
+                </div>
+                
+                <div class="contact-card glass-card fade-in">
+                    <div class="contact-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="contact-card-title">Email</h3>
+                    <p class="contact-card-text">Send us an email anytime</p>
+                    <div class="contact-card-info">
+                        <a href="mailto:info@bernos.et">info@bernos.et</a>
+                        <a href="mailto:support@bernos.et">support@bernos.et</a>
+                    </div>
+                </div>
+                
+                <div class="contact-card glass-card fade-in">
+                    <div class="contact-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="contact-card-title">Location</h3>
+                    <p class="contact-card-text">Visit our office</p>
+                    <div class="contact-card-info">
+                        <p>Bole Road, Addis Ababa</p>
+                        <p>Ethiopia, East Africa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form-section section-padding">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Send Us a Message</h2>
+                <p class="section-subtitle">We'll get back to you as soon as possible</p>
+            </div>
+            
+            <div class="contact-form-container glass-card fade-in">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="sales">Sales</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="careers">Careers</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Send Message</button>
+                        <button type="reset" class="btn-secondary">Clear Form</button>
+                    </div>
+                </form>
+                
+                <div id="form-success" class="form-success" style="display: none;">
+                    <div class="success-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Message Sent Successfully!</h3>
+                    <p>Thank you for contacting us. We'll respond to your message within 24 hours.</p>
+                    <button class="btn-primary" id="new-message-btn">Send Another Message</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section section-padding">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Our Location</h2>
+                <p class="section-subtitle">Find us on the map</p>
+            </div>
+            
+            <div class="map-container glass-card fade-in">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5511167456!2d38.7894!3d9.0092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMDAnMzMuMSJOIDM4wrA0NycyMS44IkU!5e0!3m2!1sen!2sus!4v1623345678901!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section section-padding">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Quick answers to common questions</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item glass-card fade-in">
+                    <div class="faq-question">
+                        <h3>What are your business hours?</h3>
+                        <span class="faq-toggle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our office is open Monday through Friday from 9:00 AM to 6:00 PM (East Africa Time). We are closed on weekends and public holidays. However, our technical support team is available 24/7 for urgent matters.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item glass-card fade-in">
+                    <div class="faq-question">
+                        <h3>How quickly can I expect a response to my inquiry?</h3>
+                        <span class="faq-toggle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We strive to respond to all inquiries within 24 hours during business days. For urgent matters, please call our support line for immediate assistance.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item glass-card fade-in">
+                    <div class="faq-question">
+                        <h3>Do you offer remote consultations?</h3>
+                        <span class="faq-toggle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer remote consultations via video conferencing platforms. This allows us to serve clients across Ethiopia and internationally. You can schedule a remote consultation through our contact form or by calling our office.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item glass-card fade-in">
+                    <div class="faq-question">
+                        <h3>How can I request a quote for your services?</h3>
+                        <span class="faq-toggle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can request a quote by filling out our contact form and selecting "Sales" as the subject. Please provide as much detail as possible about your project requirements to help us provide an accurate quote. Alternatively, you can call our sales team directly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section section-padding">
+        <div class="container">
+            <div class="cta-container glass-card fade-in">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Transform Your Business?</h2>
+                    <p class="cta-text">Contact us today to discuss how our services can help you achieve your technology goals and drive business growth.</p>
+                    <div class="cta-buttons">
+                        <a href="#contact-form" class="btn-primary">Get in Touch</a>
+                        <a href="services.html" class="btn-secondary">Explore Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.classList.remove('fade-in');
+                el.classList.add('scroll-animate');
+            });
+            
+            document.querySelectorAll('.contact-card').forEach((el, index) => {
+                if (!el.classList.contains('scroll-animate')) {
+                    el.classList.add('scroll-animate');
+                    el.classList.add(`delay-${(index % 3) * 100}`);
+                }
+            });
+            
+            document.querySelector('.contact-form-container').classList.add('scroll-animate', 'from-bottom');
+            
+            document.querySelector('.map-container').classList.add('scroll-animate', 'from-bottom');
+            
+            document.querySelectorAll('.faq-item').forEach((el, index) => {
+                if (!el.classList.contains('scroll-animate')) {
+                    el.classList.add('scroll-animate');
+                    el.classList.add(`delay-${(index % 4) * 100}`);
+                }
+            });
+            
+            document.querySelector('.cta-container').classList.add('scroll-animate', 'from-bottom');
+            
+            initScrollAnimations();
+            
+            initFaqToggle();
+        });
+        
+        function initScrollAnimations() {
+            const scrollElements = document.querySelectorAll('.scroll-animate');
+            
+            const isElementInViewport = (el) => {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.85 &&
+                    rect.bottom >= 0
+                );
+            };
+            
+            const displayScrollElement = (element) => {
+                element.classList.add('visible');
+            };
+            
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (isElementInViewport(el)) {
+                        displayScrollElement(el);
+                    }
+                });
+            };
+            
+            handleScrollAnimation();
+            
+            window.addEventListener('scroll', () => {
+                handleScrollAnimation();
+            });
+        }
+    </script>
+</body>
+</html> 

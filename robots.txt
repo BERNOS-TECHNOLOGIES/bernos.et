@@ -1,0 +1,72 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bernos.et/sitemap.xml
+
+Disallow: /chatbot-proxy.php
+Disallow: /admin/
+Disallow: /private/
+
+# Block specific crawlers known for aggressive scraping
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: Sogou web spider
+Disallow: /
+
+User-agent: YandexBot
+Disallow: /
+
+# Crawl-delay directive for bots to reduce server load
+Crawl-delay: 10
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: HTTrack Website Copier
+Disallow: /
+
+User-agent: WebZIP
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: Offline Explorer
+Disallow: /
+
+User-agent: Teleport
+Disallow: /
+
+User-agent: TeleportPro
+Disallow: /
+
+User-agent: WebStripper
+Disallow: /
+
+User-agent: Fetch
+Disallow: /
+
+User-agent: Offline Navigator
+Disallow: /
+
+User-agent: Wget
+Disallow: /
+
+User-agent: Scooter
+Disallow: /
+
+User-agent: curl
+Disallow: /
+
+User-agent: libwww-perl
+Disallow: /
+
+User-agent: Python-urllib
+Disallow: /
+
+User-agent: Python-requests
+Disallow: /
+
+User-agent: Go-http-client
+Disallow: / 

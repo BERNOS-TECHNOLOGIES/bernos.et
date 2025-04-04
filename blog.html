@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | BERNOS TECHNOLOGIES</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="vector.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="emergency.css">
+</head>
+<body>
+    <div class="background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        
+        <div class="glass-panel glass-panel-1"></div>
+        <div class="glass-panel glass-panel-2"></div>
+        <div class="glass-panel glass-panel-3"></div>
+    </div>
+    
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="vector.png" alt="BERNOS TECHNOLOGIES Logo" class="logo-image">
+                <div class="logo-text">
+                    <span class="logo-text-bernos">BERNOS</span>
+                    <span class="logo-text-technologies">TECHNOLOGIES</span>
+                </div>
+            </a>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">Inside Look</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <button class="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </nav>
+            
+            <div class="right-section" style="display: flex; align-items: center;">
+                <div class="contact-support">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <div class="contact-info">
+                        <span class="contact-label">Contact Support</span>
+                        <span class="contact-number">+251910111213</span>
+                    </div>
+                </div>
+                
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search...">
+                    <button class="search-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-accent"></div>
+        
+        <div class="container">
+            <div class="page-hero-content fade-in">
+                <h1 class="page-title">Our Blog</h1>
+                <p class="page-subtitle">Insights, news, and trends from the world of technology</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-posts section-padding">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Featured Articles</h2>
+                <p class="section-subtitle">Our latest insights and thought leadership</p>
+            </div>
+            
+            <div class="featured-post-container glass-card fade-in">
+                <div class="featured-post-image">
+                    <i class="fas fa-robot fa-5x pulse-icon"></i>
+                    <div class="featured-post-category">Artificial Intelligence</div>
+                </div>
+                <div class="featured-post-content">
+                    <div class="post-meta">
+                        <span class="post-date"><i class="far fa-calendar-alt"></i> June 15, 2023</span>
+                        <span class="post-author"><i class="far fa-user"></i> By Abebe Kebede</span>
+                    </div>
+                    <h3 class="featured-post-title">The AI Revolution: How Machine Learning is Transforming Business in Ethiopia</h3>
+                    <p class="featured-post-excerpt">Artificial intelligence is reshaping industries across Ethiopia, from agriculture to finance. Learn how local businesses are leveraging AI to solve unique challenges and drive innovation.</p>
+                    <a href="#" class="btn-primary">Read Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="recent-posts section-padding">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Recent Articles</h2>
+                <p class="section-subtitle">Stay updated with our latest content</p>
+            </div>
+            
+            <div class="posts-grid">
+                
+                <div class="post-card glass-card fade-in">
+                    <div class="post-image">
+                        <i class="fas fa-cloud fa-4x pulse-icon"></i>
+                        <div class="post-category">Cloud Computing</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar-alt"></i> May 28, 2023</span>
+                        </div>
+                        <h3 class="post-title">5 Key Considerations for Successful Cloud Migration</h3>
+                        <p class="post-excerpt">Moving to the cloud requires careful planning. Discover the essential factors to consider for a smooth transition.</p>
+                        <a href="#" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="post-card glass-card fade-in">
+                    <div class="post-image">
+                        <i class="fas fa-shield-alt fa-4x pulse-icon"></i>
+                        <div class="post-category">Cybersecurity</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar-alt"></i> May 15, 2023</span>
+                        </div>
+                        <h3 class="post-title">Cybersecurity Threats Facing Ethiopian Businesses in 2023</h3>
+                        <p class="post-excerpt">As digital transformation accelerates, so do cyber threats. Learn about the most common attacks and how to protect your business.</p>
+                        <a href="#" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="post-card glass-card fade-in">
+                    <div class="post-image">
+                        <i class="fas fa-digital-tachograph fa-4x pulse-icon"></i>
+                        <div class="post-category">Digital Transformation</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar-alt"></i> April 30, 2023</span>
+                        </div>
+                        <h3 class="post-title">Digital Transformation: A Roadmap for Ethiopian Enterprises</h3>
+                        <p class="post-excerpt">Digital transformation is no longer optional. Discover a practical framework for organizations at any stage of their digital journey.</p>
+                        <a href="#" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="post-card glass-card fade-in">
+                    <div class="post-image">
+                        <i class="fas fa-network-wired fa-4x pulse-icon"></i>
+                        <div class="post-category">IoT</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar-alt"></i> April 12, 2023</span>
+                        </div>
+                        <h3 class="post-title">IoT Applications in Agriculture: Transforming Ethiopian Farming</h3>
+                        <p class="post-excerpt">Internet of Things technology is revolutionizing agriculture. Explore how smart farming is increasing yields and sustainability.</p>
+                        <a href="#" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="post-card glass-card fade-in">
+                    <div class="post-image">
+                        <i class="fas fa-chart-line fa-4x pulse-icon"></i>
+                        <div class="post-category">Data Analytics</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar-alt"></i> March 25, 2023</span>
+                        </div>
+                        <h3 class="post-title">Leveraging Data Analytics for Business Growth in Ethiopia</h3>
+                        <p class="post-excerpt">Data is the new oil. Learn how businesses can harness the power of analytics to drive strategic decision-making and growth.</p>
+                        <a href="#" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="post-card glass-card fade-in">
+                    <div class="post-image">
+                        <i class="fas fa-mobile-alt fa-4x pulse-icon"></i>
+                        <div class="post-category">Mobile Development</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="post-date"><i class="far fa-calendar-alt"></i> March 10, 2023</span>
+                        </div>
+                        <h3 class="post-title">Mobile App Development Trends Shaping the Ethiopian Market</h3>
+                        <p class="post-excerpt">Mobile apps are essential for reaching customers. Discover the latest trends and best practices in mobile development.</p>
+                        <a href="#" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination fade-in">
+                <a href="#" class="pagination-item active">1</a>
+                <a href="#" class="pagination-item">2</a>
+                <a href="#" class="pagination-item">3</a>
+                <span class="pagination-separator">...</span>
+                <a href="#" class="pagination-item">10</a>
+                <a href="#" class="pagination-next">
+                    Next <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-categories section-padding">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Categories</h2>
+                <p class="section-subtitle">Browse articles by topic</p>
+            </div>
+            
+            <div class="blog-categories-grid">
+                <a href="#" class="category-item glass-card fade-in" data-delay="100">
+                    <div class="category-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="category-name">Artificial Intelligence</h3>
+                    <span class="category-count">12 Articles</span>
+                    <div class="category-hover-indicator"></div>
+                </a>
+                
+                <a href="#" class="category-item glass-card fade-in" data-delay="200">
+                    <div class="category-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="category-name">Cloud Computing</h3>
+                    <span class="category-count">8 Articles</span>
+                    <div class="category-hover-indicator"></div>
+                </a>
+                
+                <a href="#" class="category-item glass-card fade-in" data-delay="300">
+                    <div class="category-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="category-name">Cybersecurity</h3>
+                    <span class="category-count">15 Articles</span>
+                    <div class="category-hover-indicator"></div>
+                </a>
+                
+                <a href="#" class="category-item glass-card fade-in" data-delay="400">
+                    <div class="category-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="category-name">IoT</h3>
+                    <span class="category-count">7 Articles</span>
+                    <div class="category-hover-indicator"></div>
+                </a>
+                
+                <a href="#" class="category-item glass-card fade-in" data-delay="500">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="category-name">Data Analytics</h3>
+                    <span class="category-count">10 Articles</span>
+                    <div class="category-hover-indicator"></div>
+                </a>
+                
+                <a href="#" class="category-item glass-card fade-in" data-delay="600">
+                    <div class="category-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="category-name">Mobile Development</h3>
+                    <span class="category-count">9 Articles</span>
+                    <div class="category-hover-indicator"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section section-padding">
+        <div class="container">
+            <div class="newsletter-container glass-card fade-in">
+                <div class="newsletter-content">
+                    <h2 class="newsletter-title">Subscribe to Our Newsletter</h2>
+                    <p class="newsletter-text">Stay updated with the latest technology trends, insights, and news. We'll send you valuable content straight to your inbox.</p>
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email Address" required>
+                            <button type="submit" class="btn-primary">Subscribe</button>
+                        </div>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="article-popup" class="article-popup">
+        <div class="article-popup-content glass-card">
+            <button class="article-popup-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="article-popup-header">
+                <div class="article-popup-category"></div>
+                <h2 class="article-popup-title"></h2>
+                <div class="article-popup-meta">
+                    <span class="article-popup-date"><i class="far fa-calendar-alt"></i> <span></span></span>
+                    <span class="article-popup-author"><i class="far fa-user"></i> <span></span></span>
+                </div>
+            </div>
+            <div class="article-popup-body">
+                
+            </div>
+            <div class="article-popup-footer">
+                <div class="article-popup-tags">
+                    <span class="tag">Technology</span>
+                    <span class="tag">Innovation</span>
+                    <span class="tag">Ethiopia</span>
+                </div>
+                <div class="article-popup-share">
+                    <span>Share:</span>
+                    <a href="#" class="share-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="share-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="share-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.classList.remove('fade-in');
+                el.classList.add('scroll-animate');
+            });
+            
+            document.querySelector('.featured-post-container').classList.add('scroll-animate', 'from-bottom');
+            
+            document.querySelectorAll('.post-card').forEach((el, index) => {
+                if (!el.classList.contains('scroll-animate')) {
+                    el.classList.add('scroll-animate');
+                    el.classList.add(`delay-${(index % 6) * 100}`);
+                }
+            });
+            
+            document.querySelectorAll('.category-item').forEach((el, index) => {
+                if (!el.classList.contains('scroll-animate')) {
+                    el.classList.add('scroll-animate');
+                    el.classList.add('from-bottom');
+                    el.classList.add(`delay-${(index % 6) * 100}`);
+                }
+            });
+            
+            document.querySelector('.newsletter-container').classList.add('scroll-animate', 'from-bottom');
+            
+            initScrollAnimations();
+        });
+        
+        function initScrollAnimations() {
+            const scrollElements = document.querySelectorAll('.scroll-animate');
+            
+            const isElementInViewport = (el) => {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.85 &&
+                    rect.bottom >= 0
+                );
+            };
+            
+            const displayScrollElement = (element) => {
+                element.classList.add('visible');
+            };
+            
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (isElementInViewport(el)) {
+                        displayScrollElement(el);
+                    }
+                });
+            };
+            
+            handleScrollAnimation();
+            
+            window.addEventListener('scroll', () => {
+                handleScrollAnimation();
+            });
+        }
+    </script>
+</body>
+</html> 

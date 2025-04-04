@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inside Look | BERNOS TECHNOLOGIES</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="vector.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="emergency.css">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 800px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: var(--text-color);
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .modal-body {
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .modal-body {
+                flex-direction: row;
+                gap: 30px;
+            }
+        }
+
+        .modal-image-container {
+            flex: 0 0 250px;
+            margin-bottom: 20px;
+        }
+
+        .modal-image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            aspect-ratio: 1/1;
+        }
+
+        .modal-info {
+            flex: 1;
+        }
+
+        .modal-info h2 {
+            margin-top: 0;
+            font-size: 28px;
+            color: var(--accent-color);
+        }
+
+        .modal-info p:first-of-type {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--text-color-light);
+        }
+
+        .modal-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .modal-social .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+
+        .modal-social .social-icon:hover {
+            background: var(--accent-color);
+            color: var(--bg-color);
+            transform: none;
+        }
+
+        .team-section {
+            position: relative;
+            overflow: hidden;
+            margin: 40px 0;
+        }
+        
+        .team-track {
+            display: flex;
+            gap: 20px;
+            animation: scrollTeam 30s linear infinite;
+        }
+        
+        .team-track:hover {
+            animation-play-state: paused !important;
+        }
+        
+        .team-member:hover ~ .team-track {
+            animation-play-state: paused !important;
+        }
+        
+        @keyframes scrollTeam {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-250px * 7 - 20px * 7));
+            }
+        }
+        
+        .team-member {
+            flex: 0 0 250px;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.05);
+            padding-bottom: 15px;
+        }
+        
+        .member-image-container {
+            overflow: hidden;
+            border-radius: 12px 12px 0 0;
+        }
+        
+        .member-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+        
+        .member-name {
+            margin: 15px 0 5px;
+            padding: 0 15px;
+            font-size: 18px;
+            color: var(--accent-color);
+        }
+        
+        .member-title {
+            margin: 0;
+            padding: 0 15px;
+            font-size: 14px;
+            color: var(--text-color-light);
+        }
+        
+        .member-bio {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(25, 40, 80, 0.95) 70%, rgba(25, 40, 80, 0.7) 90%, rgba(25, 40, 80, 0));
+            color: var(--text-color);
+            padding: 30px 15px 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            font-size: 14px;
+            max-height: 75%;
+            overflow-y: auto;
+            backdrop-filter: blur(3px);
+        }
+        
+        .team-member:hover .member-bio {
+            transform: translateY(0);
+        }
+        
+        .member-social {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            justify-content: center;
+        }
+        
+        .member-social a {
+            color: var(--text-color);
+            font-size: 16px;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            transition: all 0.2s ease;
+        }
+        
+        .member-social a:hover {
+            background: var(--accent-color);
+            color: var(--bg-color);
+        }
+
+        a[href^="mailto:"] {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a[href^="mailto:"]:hover {
+            color: var(--accent-color);
+        }
+        
+        .contact-email {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+        
+        .location-email {
+            color: var(--text-color);
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 5px;
+            transition: color 0.3s ease;
+        }
+        
+        .location-email:hover {
+            color: var(--accent-color);
+        }
+        
+        .footer-contact a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-contact a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        
+        <div class="glass-panel glass-panel-1"></div>
+        <div class="glass-panel glass-panel-2"></div>
+        <div class="glass-panel glass-panel-3"></div>
+    </div>
+    
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo" aria-label="BERNOS TECHNOLOGIES Home">
+                <img src="vector.png" alt="BERNOS TECHNOLOGIES Logo - Leading Ethiopian Tech Company" class="logo-image">
+                <div class="logo-text">
+                    <span class="logo-text-bernos">BERNOS</span>
+                    <span class="logo-text-technologies">TECHNOLOGIES</span>
+                </div>
+            </a>
+            
+            <nav aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link active">Inside Look</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="products.html" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <button class="mobile-menu-button" aria-label="Toggle mobile menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </nav>
+            
+            <div class="right-section" style="display: flex; align-items: center;">
+                <div class="contact-support">
+                    <div class="contact-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <div class="contact-info">
+                        <span class="contact-label">Email Support</span>
+                        <a href="mailto:support@bernos.et" class="contact-email">support@bernos.et</a>
+                    </div>
+                </div>
+                
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search..." aria-label="Search the website">
+                    <button class="search-button" aria-label="Submit search">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="page-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-accent"></div>
+        
+        <div class="container">
+            <div class="page-hero-content fade-in">
+                <h1 class="page-title">Inside Look</h1>
+                <p class="page-subtitle">Discover our story, mission, and the team behind Ethiopia's leading technology solutions provider</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="story-section section-padding">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <h2 class="section-title">Our Story</h2>
+                <p class="section-subtitle">The journey of BERNOS TECHNOLOGIES</p>
+            </div>
+            
+            <div class="story-content">
+                <div class="story-text scroll-animate from-right delay-200">
+                    <p>BERNOS TECHNOLOGIES was founded in January 2025   with a vision to transform the technology landscape in Ethiopia and beyond. What started as a small team of passionate tech enthusiasts has grown into a leading technology company serving clients across various industries.</p>
+                    
+                    <p>Our journey began when a group of young engineers recognized the need for innovative technology solutions that could address the unique challenges faced by businesses in the region. With determination and expertise, they set out to build a company that would bridge the gap between cutting-edge technology and practical business applications.</p>
+                    
+                    <p>Today, BERNOS TECHNOLOGIES stands as a testament to what can be achieved with vision, expertise, and a commitment to excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-section section-padding">
+        <div class="container">
+            <div class="mission-vision-container">
+                <div class="mission-card glass-card scroll-animate from-left">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <h2 class="card-title">Our Mission</h2>
+                    <p class="card-text">To empower businesses through innovative technology solutions that drive growth, efficiency, and competitive advantage. We are committed to delivering excellence in every project and building long-term partnerships with our clients.</p>
+                </div>
+                
+                <div class="vision-card glass-card scroll-animate from-right">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="16"></line>
+                            <line x1="8" y1="12" x2="16" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h2 class="card-title">Our Vision</h2>
+                    <p class="card-text">To be the leading technology partner for businesses across Africa, recognized for our innovation, expertise, and commitment to transforming the digital landscape. We envision a future where technology enables sustainable growth and positive impact.</p>
+                </div>
+            </div>
+            
+            <div class="values-container">
+                <div class="section-header scroll-animate">
+                    <h2 class="section-title">Our Core Values</h2>
+                    <p class="section-subtitle">The principles that guide everything we do</p>
+                </div>
+                
+                <div class="values-grid">
+                    <div class="value-card glass-card scroll-animate from-bottom delay-100">
+                        <div class="value-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+                            </svg>
+                        </div>
+                        <h3 class="value-title">Excellence</h3>
+                        <p class="value-text">We strive for excellence in everything we do, from code quality to client communication.</p>
+                    </div>
+                    
+                    <div class="value-card glass-card scroll-animate from-bottom delay-200">
+                        <div class="value-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="value-title">Innovation</h3>
+                        <p class="value-text">We embrace creativity and forward-thinking to develop solutions that address tomorrow's challenges.</p>
+                    </div>
+                    
+                    <div class="value-card glass-card scroll-animate from-bottom delay-300">
+                        <div class="value-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="value-title">Collaboration</h3>
+                        <p class="value-text">We believe in the power of teamwork and partnership to achieve exceptional results.</p>
+                    </div>
+                    
+                    <div class="value-card glass-card scroll-animate from-bottom delay-400">
+                        <div class="value-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="9" y1="9" x2="15" y2="15"></line>
+                                <line x1="15" y1="9" x2="9" y2="15"></line>
+                            </svg>
+                        </div>
+                        <h3 class="value-title">Integrity</h3>
+                        <p class="value-text">We conduct our business with honesty, transparency, and ethical standards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section section-padding">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <h2 class="section-title">Meet Our Expert Team</h2>
+                <p class="section-subtitle">The brilliant minds driving innovation at BERNOS TECHNOLOGIES</p>
+            </div>
+            
+            <div class="team-slider scroll-animate delay-200">
+                <div class="team-track">
+                    <div class="team-member" data-member-id="1">
+                        <div class="member-image-container">
+                            <img src="danawit.jpg" alt="Danawit Habtamu - Full Stack Developer at BERNOS TECHNOLOGIES Ethiopia" class="member-image">
+                        </div>
+                        <h3 class="member-name">Danawit Habtamu</h3>
+                        <p class="member-title">Full Stack Developer</p>
+                        <div class="member-bio">
+                            <p>Danawit is a passionate Full Stack Developer with years of experience building web applications. She specializes in React, Node.js, and MongoDB, and has led numerous successful projects for our clients.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member" data-member-id="2">
+                        <div class="member-image-container">
+                            <img src="nahom.jpg" alt="Nahom Keneni - Senior Backend Engineer at BERNOS TECHNOLOGIES Ethiopia" class="member-image">
+                        </div>
+                        <h3 class="member-name">Nahom Keneni</h3>
+                        <p class="member-title">Senior Backend Engineer</p>
+                        <div class="member-bio">
+                            <p>Nahom Keneni is a backend engineer and web developer with a strong focus on building scalable and efficient systems. Passionate about solving complex problems, Nahom specializes in backend development, database management, and system architecture.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member" data-member-id="3">
+                        <div class="member-image-container">
+                            <img src="biruk.jpg" alt="Biruk Getachew - Senior Web Developer at BERNOS TECHNOLOGIES Ethiopia" class="member-image">
+                        </div>
+                        <h3 class="member-name">Biruk Getachew</h3>
+                        <p class="member-title">Senior Web Developer</p>
+                        <div class="member-bio">
+                            <p>Biruk leads our web development team with expertise in modern frontend frameworks and responsive design. He has a keen eye for detail and is passionate about creating intuitive user experiences.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member" data-member-id="4">
+                        <div class="member-image-container">
+                            <img src="ananya.jpg" alt="Ananya Addisu - Senior Developer at BERNOS TECHNOLOGIES Ethiopia" class="member-image">
+                        </div>
+                        <h3 class="member-name">Ananya Addisu</h3>
+                        <p class="member-title">Senior Developer</p>
+                        <div class="member-bio">
+                            <p>Ananya is a versatile developer with expertise across multiple programming languages and platforms. He specializes in AI development and has many successful applications.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member" data-member-id="5">
+                        <div class="member-image-container">
+                            <img src="selamawit.jpg" alt="Selamawit Abay - Marketing Head at BERNOS TECHNOLOGIES Ethiopia" class="member-image">
+                        </div>
+                        <h3 class="member-name">Selamawit Abay</h3>
+                        <p class="member-title">Marketing Head</p>
+                        <div class="member-bio">
+                            <p>Selamawit leads our marketing efforts with innovative strategies that have significantly increased our brand visibility. She has a background in digital marketing and business development.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member" data-member-id="6">
+                        <div class="member-image-container">
+                            <img src="khalid.jpg" alt="Khalid Shikur - Project Manager at BERNOS TECHNOLOGIES Ethiopia" class="member-image">
+                        </div>
+                        <h3 class="member-name">Khalid Shikur</h3>
+                        <p class="member-title">Project Manager</p>
+                        <div class="member-bio">
+                            <p>Khalid ensures our projects are delivered on time and within budget. With his strong communication skills and technical background, he bridges the gap between our clients and development team.</p>
+                        </div>
+                    </div>
+
+                    <div class="team-member" data-member-id="7">
+                        <div class="member-image-container">
+                            <img src="natnael.jpg" alt="Natnael Sendeku - Senior Security Engineer at BERNOS TECHNOLOGIES Ethiopia" class="member-image">
+                        </div>
+                        <h3 class="member-name">Natnael Sendeku</h3>
+                        <p class="member-title">Senior Security Engineer</p>
+                        <div class="member-bio">
+                            <p>Natnael is our cybersecurity expert who ensures all our applications and systems are secure. He has extensive experience in penetration testing, security audits, and implementing security best practices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="locations-section section-padding" id="our-locations">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <h2 class="section-title">Our Office Locations</h2>
+                <p class="section-subtitle">Where to find BERNOS TECHNOLOGIES in Ethiopia</p>
+            </div>
+            
+            <div class="locations-grid">
+                <div class="location-card glass-card scroll-animate from-left delay-200">
+                    <div class="location-image">
+                        <img src="https://images.pexels.com/photos/30177512/pexels-photo-30177512/free-photo-of-addis-ababa-skyline-at-sunset.jpeg" alt="BERNOS TECHNOLOGIES Headquarters in Addis Ababa, Ethiopia - Bole Road" class="location-img">
+                    </div>
+                    <div class="location-info">
+                        <h3 class="location-name">Addis Ababa Headquarters</h3>
+                        <address class="location-address">
+                            Bole Road, Friendship Building, 4th Floor<br>
+                            
+                        </address>
+                        <p class="location-contact">
+                            <a href="mailto:addisababa@bernos.et" class="location-email">addisababa@bernos.et</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="location-card glass-card scroll-animate from-right delay-200">
+                    <div class="location-image">
+                        <img src="https://olivehotelbahirdar.com/wp-content/uploads/2024/04/Bahir-dar-Tour-lake-tana.jpg" alt="BERNOS TECHNOLOGIES Branch Office in Bahir Dar, Ethiopia - Near Lake Tana" class="location-img">
+                    </div>
+                    <div class="location-info">
+                        <h3 class="location-name">Bahir Dar Branch Office</h3>
+                        <address class="location-address">
+                            Igoli Building, 3rd Floor, 319<br>
+                            
+                        </address>
+                        <p class="location-contact">
+                            <a href="mailto:bahirdar@bernos.et" class="location-email">bahirdar@bernos.et</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section section-padding">
+        <div class="container">
+            <div class="cta-container glass-card scroll-animate from-bottom">
+                <div class="cta-content">
+                    <h2 class="cta-title">Join Our Growing Team in Ethiopia</h2>
+                    <p class="cta-text">We're always looking for talented technology professionals to join our innovative team at BERNOS TECHNOLOGIES. Explore current opportunities or send us your resume today.</p>
+                    <div class="cta-buttons">
+                        <a href="careers.html" class="btn-primary">View Career Openings</a>
+                        <a href="contact.html" class="btn-secondary">Contact Our Team</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "BERNOS TECHNOLOGIES",
+      "url": "https://bernos.et",
+      "logo": "https://bernos.et/vector.png",
+      "description": "Leading technology solutions provider in Ethiopia, empowering businesses across Africa since 2025.",
+      "email": "support@bernos.et",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Bole Road, Friendship Building, 4th Floor",
+          "addressLocality": "Addis Ababa",
+          "addressCountry": "Ethiopia"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Igoli Building, 3rd Floor, Suite 319",
+          "addressLocality": "Bahir Dar",
+          "addressCountry": "Ethiopia"
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/bernos-technologies",
+        "https://www.instagram.com/bernos_technologies",
+        "https://twitter.com/bernos_tech"
+      ]
+    }
+    </script>
+
+    <script src="script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const teamTrack = document.querySelector('.team-track');
+        const teamMembers = document.querySelectorAll('.team-member');
+        
+        teamMembers.forEach(member => {
+            member.addEventListener('mouseenter', function() {
+                teamTrack.style.animationPlayState = 'paused';
+            });
+            
+            member.addEventListener('mouseleave', function() {
+                teamTrack.style.animationPlayState = 'running';
+            });
+        });
+    });
+    </script>
+</body>
+</html> 
