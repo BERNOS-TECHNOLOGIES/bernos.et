@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="vector.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!--<link rel="stylesheet" href="styles.css">-->
+    <!--<link rel="stylesheet" href="responsive.css">-->
 
 <script src="https://www.youtube.com/iframe_api"></script>
 <script>
@@ -648,13 +648,13 @@ body {
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 600px) {
     .hero-title {
         font-size: 4rem;
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 600px) {
     .nav-menu {
         display: none;
     }
@@ -676,22 +676,46 @@ body {
     }
 }
 
-@media (max-width: 768px) {
-    .hero-content {
-        max-width: 100%;
-        text-align: center;
-        margin-left: 0;
-        margin-bottom: 200px;
+@media (max-width: 600px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 300px;
+        margin: 0 auto;
+        background: var(--background-color);
+        padding: 5px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     
-    .hero-title {
-        font-size: 2.7rem;
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
-    .discover-more {
-        bottom: 50px;
-        left: 50%;
-        transform: translateX(-50%);
+    .nav-menu li {
+        margin: 5px 0;
+    }
+    
+    .nav-menu a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    
+    .hamburger {
+        display: block;
+        font-size: 20px;
+        padding: 5px;
+    }
+    
+    .nav-container {
+        padding: 5px 15px;
+    }
+    
+    .logo {
+        font-size: 18px;
     }
 }
 
@@ -1294,26 +1318,222 @@ body {
     }
 }
 
-@media (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: 1fr;
+@media (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+        width: 100%;
     }
-    
-    .stats-container {
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .nav-container {
+        width: 100%;
+        padding: 10px 15px;
+        margin: 0;
+    }
+
+    .hero-section {
+        width: 100%;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        margin: 0;
+        text-align: left;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .hero-buttons {
         flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        align-items: stretch;
     }
-    
-    .cta-container {
-        padding: 40px 20px;
+
+    .hero-buttons a {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-size: 16px;
     }
-    
-    .cta-title {
-        font-size: 2rem;
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        background: var(--background-color);
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    
-    .cta-buttons {
+
+    .nav-menu.active {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-menu li {
+        margin: 8px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu a {
+        font-size: 16px;
+        padding: 8px;
+        display: block;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 24px;
+        padding: 5px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .right-section {
         gap: 15px;
+    }
+
+    .services-section {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .services-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .service-card {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .service-card h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .service-card p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .why-choose-section {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .why-choose-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .why-choose-card {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .why-choose-card h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .why-choose-card p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .section-description {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .cloud-solutions-section {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .cloud-solutions-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .solution-card {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .solution-card h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .solution-card p {
+        font-size: 14px;
+        line-height: 1.5;
     }
 }
 
@@ -1984,22 +2204,22 @@ body {
             
             <div class="right-section" style="display: flex; align-items: center;">
                 <div class="contact-support">
-                    <div class="contact-icon">
+                    <!--<div class="contact-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
-                    </div>
+                    </div>-->
                     <div class="contact-info">
-                        <span class="contact-label">Email Support</span>
-                        <span class="contact-number">support@bernos.et</span>
+                        <!--<span class="contact-label">Email Support</span>
+                        <span class="contact-number">support@bernos.et</span>-->
                     </div>
                 </div>
                 
                 <div class="search-container">
                     <input type="text" class="search-input" placeholder="Search...">
                     <button class="search-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <!--<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">-->
                             <circle cx="11" cy="11" r="8"></circle>
                             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                         </svg>
@@ -3425,5 +3645,118 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
 </style>
+<!--
+@media (max-width: 600px) {
+    .services-section {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .services-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .service-card {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .service-card h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .service-card p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .why-choose-section {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .why-choose-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .why-choose-card {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .why-choose-card h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .why-choose-card p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .section-description {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .cloud-solutions-section {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .cloud-solutions-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .solution-card {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .solution-card h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .solution-card p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}-->
 </body>
 </html> 
